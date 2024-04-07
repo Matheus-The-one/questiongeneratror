@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,14 +8,35 @@
 <body>
     <script src="./index.js"></script>
     <main>
-      <div>
-        <p></p>
-        <p></p>
-      </div>
-      <div>=</div>
-      <div><p></p>
-      <p></p></div>
+        <div>
+            <button><a href="gasamartivebeli.html">gamartiveba</a></button>
+            <button class="generate" name="generator" onclick="updateValues()">Generate</button>
+            
+            <div id="values">
+                <p id="x"></p>
+                <p id="y"></p>
+                <p id="z"></p>
+                <p id="h"></p>
+            </div>
+        </div>
     </main>
-    
+
+    <script>
+        function Generating() {
+            const x = Math.floor(Math.random() * 10);
+            const y = Math.floor(Math.random() * 10);
+            const z = Math.floor(Math.random() * 10);
+            const h = Math.floor(Math.random() * 10);
+            return { x, y, z, h };
+        }
+
+        function updateValues() {
+            const { x, y, z, h } = Generating();
+            document.getElementById('x').textContent = `X: ${x}`;
+            document.getElementById('y').textContent = `Y: ${y}`;
+            document.getElementById('z').textContent = `Z: ${z}`;
+            document.getElementById('h').textContent = `H: ${h}`;
+        }
+    </script>
 </body>
 </html>
