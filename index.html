@@ -13,10 +13,15 @@
             <button class="generate" name="generator" onclick="updateValues()">Generate</button>
             
             <div id="values">
-                <p id="x"></p>
-                <p id="y"></p>
-                <p id="z"></p>
-                <p id="h"></p>
+                <div>
+                    <p id="x" style="margin: 0; padding: 0; text-decoration: underline;"></p>
+                    
+                    <p id="y" style="margin: 0; padding: 0;"></p>
+                </div>
+                <div>
+                    <p id="z" style="margin: 0; padding: 0; text-decoration: underline;"></p>
+                    <p id="h" style="margin: 0; padding: 0;" ></p>
+                </div>
             </div>
         </div>
     </main>
@@ -32,10 +37,10 @@
 
         function updateValues() {
             const { x, y, z, h } = Generating();
-            document.getElementById('x').textContent = `X: ${x}`;
-            document.getElementById('y').textContent = `Y: ${y}`;
-            document.getElementById('z').textContent = `Z: ${z}`;
-            document.getElementById('h').textContent = `H: ${h}`;
+            document.getElementById('x').textContent = ` ${x}`;
+            document.getElementById('y').textContent = ` ${y}`;
+            document.getElementById('z').textContent = ` ${z}`;
+            document.getElementById('h').textContent = ` ${h}`;
         }
     </script>
 </body>
